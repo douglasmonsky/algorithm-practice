@@ -32,10 +32,10 @@ def merge_sort(array):
             array[k] = right_half[j]
             j += 1
             k += 1
+    else:
+        return array
     print("Merging ",array)
-    # else:
-    #     return array
-
+    
 if __name__ == "__main__":
     array = [random.randint(0, 100) for _ in range(12)]
     print(array)

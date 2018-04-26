@@ -1,14 +1,12 @@
 import random 
 
 def binary_search(array, x, left=0, right=None):
-    if not right:
+    if right is None:
         right = len(array) - 1
-
     if left > right:
         return False
     
     mid = (left + right) // 2
-    
     value = array[mid]
 
     if x == value:
