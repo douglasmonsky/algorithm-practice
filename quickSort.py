@@ -7,18 +7,21 @@ def partition(array, begin, end):
     array[pivot], array[begin] = array[begin], array[pivot]
     return pivot
 
+
 def quicksort(array, begin=0, end=None):
     if end is None:
         end = len(array) - 1
+
     def _quicksort(array, begin, end):
         if begin >= end:
-            return
+            return 
         pivot = partition(array, begin, end)
         _quicksort(array, begin, pivot - 1)
         _quicksort(array, pivot + 1, end)
     return _quicksort(array, begin, end)
 
 
-array = [97, 200, 100, 101, 211, 107]
-quicksort(array)
-print(array)
+if __name__ == "__main__":
+    array = [0, 97, 200, 100, 101, 211, 107, 0]
+    print(quicksort(array))
+    print(array)

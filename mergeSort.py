@@ -1,5 +1,6 @@
 import random
 
+
 def merge_sort(array):
     print("splitting", array)
     if len(array) > 1:
